@@ -29,7 +29,12 @@ def sign_in():
         Label(screen, image=img2, bg='white').place(x=20,y=50)
 
         screen.mainloop()
-
+    elif username != 'admin' and password != 'password':
+            messagebox.showerror('Invalid', 'Invalid password and username')
+    elif password != 'password':
+            messagebox.showerror("Invalid", "Invalid password")
+    else:
+         messagebox.showerror("Invalid", "Wrong Username")
 
 
 image = Image.open("Images\experience.png")
